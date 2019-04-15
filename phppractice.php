@@ -398,8 +398,287 @@
     echo "Is it food?";
     break;
     default;
-    echo "Your food is <other input>!";
+    echo "Your food is $favfood !";
     }
+
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+
+
+    $input1 = 5;
+    $input2 = 5;
+    $operator = "add";
+    switch($operator){
+     
+     case "add";
+      echo $input1+$input2;
+    break;
+     case "minus";
+      echo $input1-$input2;
+    break;
+     case "multiphy";
+      echo $input1*$input2;
+    break;
+    case "divide";
+     echo $input1/$input2;
+    break;
+    default;
+    echo "NOT";
+    }
+
+    echo"<br>";
+    echo"<br>";
+    
+    $x = 1; 
+    
+    while($x <= 5) {
+        
+        echo "The number is: $x <br>";
+        $x++;
+    }
+
+    echo"<br>";
+    echo"<br>";
+
+    $x = 1; 
+    do {
+        echo "The number is: $x <br>";
+        $x++;
+    } while ($x <= 4);
+
+    echo"<br>";
+    echo"<br>";
+
+    for ($x = 1; $x <= 3; $x++) {
+        echo "The number is: $x <br>";
+    }
+
+    $colors = array("red", "green", "blue", "yellow"); 
+    foreach ($colors as $value) {
+        echo "$value <br>";
+    }
+
+    for ($x = 1; $x<=4; $x++) {
+            echo $x ;
+        }
+
+    echo"<br>";
+    echo"<br>";
+
+    echo "<table border='1'><br />";
+    for ($row = 0; $row < 6; $row ++) {
+        echo ($row * 2),"<tr>";
+    for ($col = 1; $col <= 2; $col ++) {
+        echo "<td>", ($col * 1), "</td>";
+        }
+        
+    echo "</tr>";
+    }
+    echo "</table>";
+    ?>
+
+    <html>
+     <head>
+     <boby>
+      <table>
+       <tr>
+        <th>Number</th>
+        <th>Description</th>
+       </tr>
+       <?php
+        for ($rows = 1 ; $rows <= 4; $rows++){
+            echo "<tr>";
+            echo "<td>$rows</td>";
+            echo "<td>This is Data $rows</td/>";
+            echo "</tr>";
+        }
+        ?>
+
+    
+      </table>
+     </boby>
+     </head>
+    </html>
+
+<?php
+    for ($row= 1 ; $row <=5; $row++) {
+        for ($star = 1; $star <= $row;$star++) {
+            echo "*";
+        }
+    echo "<br>";
+    }
+?>
+
+<?php
+function helloMsg() {
+    echo "Hello world!";
+}
+
+helloMsg(); 
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+
+?>
+
+<?php
+function famname($firstname) {
+    echo "$firstname Oba.<br>";
+}
+
+famname("Koki");
+famname("Japhet");
+famname("Abegail");
+famname("Bernadine");
+famname("Virgie");
+?>
+
+<?php
+function famname1($firstname, $year) {
+    echo "$firstname Oba.Born in $year. <br>";
+}
+
+famname1("Koki", "1989");
+famname1("Japhet", "1993");
+famname1("Abegail", "1991");
+famname1("Bernadine", "1987");
+famname1("Virgie", "1965");
+
+ echo"<br>";
+ echo"<br>";
+
+?>
+
+<?php
+function sum($x, $y) {
+    $z = $x + $y;
+    return $z;
+}
+
+echo "5 + 9 = " . sum(5, 9) . "<br>";
+echo "9 + 13 = " . sum(9, 13) . "<br>";
+echo "4 + 4 = " . sum(4, 4);
+
+echo "<br>"
+?>
+
+
+<?php
+$x = 10;
+
+function myCheck() {
+    echo "Variable x inside function is: $x";
+} 
+myCheck();
+echo "Variable x outside function is: $x";
+ 
+echo"<br>"
+
+?>
+
+
+
+<?php
+$x = 10;
+
+function myCheck1() {
+    global $x;
+    echo "Variable x inside function is: $x";
+} 
+myCheck1();
+echo "Variable x outside function is: $x";
+
+echo "<br>";
+echo "<br>";
+
+?>
+
+<?php
+$cars = array("Toyota", "Nissan", "Honda");
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+
+echo"<br>";
+?>
+
+<?php
+$cars = array("Toyota", "Nissan", "Honda");
+$arrlength = count($cars);
+
+for($x = 0; $x < $arrlength; $x++) {
+    echo $cars[$x];
+    echo "<br>";
+}
+echo"<br>";
+?>
+
+<?php
+$cars = array("Toyota", "Nissan", "Honda");
+sort($cars);
+$arrlength = count($cars);
+
+for($x = 0; $x < $arrlength; $x++) {
+    echo $cars[$x];
+    echo "<br>";
+}
+?>
+
+<?php
+$number = array("10", "17", "22","2", "7", "1","11",);
+sort($number);
+$arrlength = count($number);
+
+for($x = 0; $x < $arrlength; $x++) {
+    echo $number[$x];
+    echo "<br>";
+}
+echo "<br>"
+?>
+
+<?php
+$number = array("10", "17", "22","2", "7", "1","11",);
+rsort($number);
+$arrlength = count($number);
+
+for($x = 0; $x < $arrlength; $x++) {
+    echo $number[$x];
+    echo "<br>";
+}
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -421,10 +700,6 @@
 
 
  
- ?> 
-
-
-
 
 
 
